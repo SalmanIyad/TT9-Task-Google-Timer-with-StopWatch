@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Google Timer</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="buttons main-buttons">
+            <button id="timerButton" class="btn btn-oval">Timer</button>
+            <button id="stopwatchButton" class="btn btn-oval">Stopwatch</button>
+        </div>
+
+        <section id="timerSection" class="timer-section">
+
+            <div class="timer">
+                <div class="time-wrapper">
+                    <input type="number" title="Hours" id="hours" min="0" placeholder="00" class="time-input">
+                </div>
+                <span class="time-separator">:</span>
+                <div class="time-wrapper">
+                    <input type="number" title="Minutes" id="minutes" min="0" placeholder="00" class="time-input">
+                </div>
+                <span class="time-separator">:</span>
+                <div class="time-wrapper">
+                    <input type="number" title="Seconds" id="seconds" min="0" placeholder="00" class="time-input">
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button id="toggle" title="Start/Pause" class="btn btn-circle"><i class="fas fa-play"></i></button>
+                <button id="reset" title="Reset" class="btn btn-circle"><i class="fas fa-redo-alt"></i></button>
+                <button id="mute" title="Mute" class="btn btn-circle"><i class="fas fa-volume-up"></i></button>
+                <button id="darkThemeButton" title="Switch Theme" class="btn btn-circle theme-button"
+                    onclick="toggleDarkTheme()">
+                    <i id="themeIcon" class="fas fa-moon"></i>
+                </button>
+                <button id="fullscreen" title="Fullscreen" class="btn btn-circle"><i class="fas fa-expand"></i></button>
+            </div>
+        </section>
+        <section id="stopwatchSection" class="stopwatch-section">
+            <div class="stopwatch">
+                <div class="time-wrapper">
+                    <span title="Hours" id="stopwatch-hours" class="time-span">00</span>
+                </div>
+                <span class="time-separator">:</span>
+                <div class="time-wrapper">
+                    <span title="Minutes" id="stopwatch-minutes" class="time-span">00</span>
+                </div>
+                <span class="time-separator">:</span>
+                <div class="time-wrapper">
+                    <span title="Seconds" id="stopwatch-seconds" class="time-span">00</span>
+                </div>
+                <span class="time-separator">:</span>
+                <div class="time-wrapper">
+                    <span title="Milliseconds" id="stopwatch-milliseconds" class="time-span">00</span>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="startStopwatch" class="btn btn-circle"><i class="fas fa-play"></i></button>
+                <button id="resetStopwatch" class="btn btn-circle"><i class="fas fa-redo-alt"></i></button>
+            </div>
+
+        </section>
+    </div>
+    <audio id="audio" src="sound.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

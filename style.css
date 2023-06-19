@@ -1,0 +1,130 @@
+:root {
+    /* dark by default */
+    --background-color: #252525;
+    --primary-color: #ddd;
+    --text-color: #f1f1f1;
+    --secondery-color: #666;
+    --transition: all 0.4s;
+}
+  
+* {
+   transition: var(--transition);
+}
+
+html {
+    height: 90vh;
+}
+
+body {
+    --background-color: #333;
+    --primary-color: #ddd;
+    --text-color: #f1f1f1;
+    --secondery-color: #666;
+
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+/* Timer Styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0.1px var(--primary-color);
+    padding: 20px;
+}
+
+.timer, .stopwatch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+.time-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-input {
+    font-size: 45px;
+    padding: 5px;
+    text-align: center;
+    width: 60px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    color: var(--secondery-color);
+}
+
+.time-span {
+    font-size: 45px;
+    padding: 5px;
+    text-align: center;
+    width: 50px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    color: var(--secondery-color);
+}
+
+.time-separator {
+    font-size: 40px;
+    color: var(--secondery-color);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    font-size: 20px;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.btn i {
+    pointer-events: none;
+}
+
+.btn-circle {
+    width: 50px;
+    height: 50px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: none;
+    box-shadow: 0 2px 4px var(--primary-color);
+    transition: all 0.4s;
+    border-radius: 50%;
+}
+
+.btn-oval {
+    width: 150px;
+    height: 50px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: none;
+    box-shadow: 0 2px 4px var(--primary-color);
+    transition: all 0.4s;
+    border-radius: 10px;
+}
+
+/* StopWatch Styles */
+
+audio {
+    display: none;
+}
